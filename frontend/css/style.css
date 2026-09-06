@@ -65,6 +65,7 @@ body {
   box-shadow: 0 0 12px rgba(59, 130, 246, 0.1);
 }
 
+
 /* Scenario button active highlight */
 .btn-scenario.active {
   ring: 2px solid #22c55e;
