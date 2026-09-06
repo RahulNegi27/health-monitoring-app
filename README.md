@@ -12,7 +12,7 @@ Modern wearables provide continuous physiological telemetry, but raw numbers alo
 * **Hybrid Anomaly Detection**:
   * **Phase 1 — Rule-based & Z-score thresholding**: Captures acute clinical deviations (e.g. resting tachycardia, nocturnal $\text{SpO}_2$ desaturations, high fever).
   * **Phase 2 — Machine Learning (Isolation Forest & Random Forest)**: Detects subtle multivariate clusters and produces an explainable continuous Risk Index ($0-100$).
-* **Wellness & Anomaly Framing**: Designed for pattern monitoring, early warning alerts, and lifestyle recommendations—**not as a replacement for medical diagnosis**.
+* **Wellness & Anomaly Framing**: Designed for pattern monitoring, early warning alerts, and lifestyle recommendations—  **not as a replacement for medical diagnosis**.
 
 ---
 
