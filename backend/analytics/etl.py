@@ -14,9 +14,7 @@ def clean_sensor_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """
     if df.empty:
         return df
-
     df = df.copy()
-
     # 1. Parse timestamps
     if "timestamp" in df.columns:
         df["timestamp"] = pd.to_datetime(df["timestamp"])
