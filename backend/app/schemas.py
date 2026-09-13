@@ -112,6 +112,6 @@ class ScenarioRequest(BaseModel):
 
 class SimulatorStatusOut(BaseModel):
     is_streaming: bool
-    current_scenario: Optional[str]
+    current_scenario: Optional[str] 
     readings_count: int
     last_reading_time: Optional[datetime]
