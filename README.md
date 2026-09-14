@@ -167,12 +167,26 @@ Click the **"Live Stream: Off"** button in the top navigation bar to activate th
 - `POST /api/health/anomalies/{id}/acknowledge` — Acknowledge an alert.
 - `POST /api/health/ingest` — Ingest single or batch telemetry reading.
 
+### Machine Learning & Model Studio
+- `GET /api/ml/status` — Model architecture, training status, and accuracy metrics.
+- `GET /api/ml/metrics` — Full evaluation metrics, 5-fold CV score, confusion matrix, and feature importances.
+- `POST /api/ml/train` — Retrain Random Forest and Isolation Forest models on demand.
+- CLI script: `python train_models.py` for standalone terminal training and evaluation.
+
+### Supabase Cloud Synchronization
+- `GET /api/supabase/status` — Cloud sync state and project connection details.
+- `POST /api/supabase/test` — Diagnostic connection ping to Supabase REST endpoint.
+- `POST /api/supabase/config` — Configure Supabase URL and API Key (saves to `.env`).
+- `POST /api/supabase/sync` — Push local telemetry and anomaly alerts to Supabase tables.
+- `GET /api/supabase/schema` — PostgreSQL migration DDL for Supabase SQL Editor.
+
 ### Simulator & Baselines
 - `POST /api/simulator/generate` — Generate multi-day preset health scenario dataset.
 - `POST /api/simulator/stream/toggle` — Start/stop 3-second live sensor streaming.
 - `GET /api/simulator/status` — Current streaming state and record count.
 - `POST /api/simulator/reset` — Reset database to clean 7-day normal baseline.
 - `GET /api/user/profile` & `PUT /api/user/profile` — Read/update personal baseline goals.
+
 
 ---
 

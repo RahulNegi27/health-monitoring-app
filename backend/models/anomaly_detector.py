@@ -7,17 +7,25 @@ from backend.analytics.feature_engineering import (
     prepare_feature_matrix, 
     FEATURE_COLUMNS
 )
+from backend.models.train_pipeline import load_saved_models
 
 class AnomalyDetector:
     def __init__(self, contamination: float = 0.05, random_state: int = 42):
         self.contamination = contamination
         self.random_state = random_state
-        self.iso_forest = IsolationForest(
-            contamination=self.contamination,
-            random_state=self.random_state,
-            n_estimators=100
-        )
-        self.is_fitted = False
+        
+        # Check if saved model exists
+        _, saved_iso, _ = load_saved_models()
+        if saved_iso is not None:
+            self.iso_forest = saved_iso
+            self.is_fitted = True
+        else:
+            self.iso_forest = IsolationForest(
+                contamination=self.contamination,
+                random_state=self.random_state,
+                n_estimators=100
+            )
+            self.is_fitted = False
 
     def fit_isolation_forest(self, df_features: pd.DataFrame):
         """

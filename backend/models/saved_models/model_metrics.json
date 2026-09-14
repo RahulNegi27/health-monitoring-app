@@ -1,0 +1,130 @@
+{
+  "status": "trained",
+  "trained_at": "2026-09-14T14:38:24.581078+00:00",
+  "sample_counts": {
+    "total_samples": 600,
+    "train_samples": 480,
+    "test_samples": 120,
+    "class_distribution": {
+      "Low": 330,
+      "Moderate": 168,
+      "High": 102
+    }
+  },
+  "performance": {
+    "test_accuracy": 1.0,
+    "macro_f1": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "weighted_f1": 1.0,
+    "cv_5fold_mean_f1": 1.0,
+    "cv_5fold_std": 0.0,
+    "isolation_forest_high_risk_sensitivity": 1.0
+  },
+  "class_breakdown": {
+    "Low": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 66
+    },
+    "Moderate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 34
+    },
+    "High": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 20
+    }
+  },
+  "confusion_matrix": {
+    "classes": [
+      "Low",
+      "Moderate",
+      "High"
+    ],
+    "matrix": [
+      [
+        66,
+        0,
+        0
+      ],
+      [
+        0,
+        34,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ]
+  },
+  "feature_importances": [
+    {
+      "feature": "temperature",
+      "importance": 0.2422,
+      "percentage": 24.22
+    },
+    {
+      "feature": "temp_diff",
+      "importance": 0.2228,
+      "percentage": 22.28
+    },
+    {
+      "feature": "spo2",
+      "importance": 0.1956,
+      "percentage": 19.56
+    },
+    {
+      "feature": "sleep_hours",
+      "importance": 0.0879,
+      "percentage": 8.79
+    },
+    {
+      "feature": "spo2_drop",
+      "importance": 0.0807,
+      "percentage": 8.07
+    },
+    {
+      "feature": "hr_zscore",
+      "importance": 0.0487,
+      "percentage": 4.87
+    },
+    {
+      "feature": "hrv_rmssd_proxy",
+      "importance": 0.0425,
+      "percentage": 4.25
+    },
+    {
+      "feature": "heart_rate",
+      "importance": 0.0418,
+      "percentage": 4.18
+    },
+    {
+      "feature": "steps",
+      "importance": 0.0318,
+      "percentage": 3.18
+    },
+    {
+      "feature": "hr_rolling_std",
+      "importance": 0.0057,
+      "percentage": 0.57
+    },
+    {
+      "feature": "is_elevated_sedentary",
+      "importance": 0.0004,
+      "percentage": 0.04
+    }
+  ],
+  "hyperparameters": {
+    "rf_n_estimators": 120,
+    "rf_max_depth": 8,
+    "iso_contamination": 0.06
+  }
+}

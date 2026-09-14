@@ -5,6 +5,7 @@ from typing import List, Dict, Any, Optional
 from sqlalchemy.orm import Session
 from sqlalchemy import desc
 
+from backend.app.config import settings
 from backend.app.models import SensorReading, DailyAggregate, AnomalyAlert, UserProfile
 from backend.app.schemas import (
     SensorReadingCreate, HealthSummaryOut, MetricCard, 
@@ -72,6 +73,14 @@ class HealthService:
 
         db.bulk_save_objects(db_records)
         db.commit()
+
+        # Optional real-time auto-sync to Supabase cloud
+        if settings.SUPABASE_AUTO_SYNC and settings.SUPABASE_URL and settings.SUPABASE_KEY:
+            try:
+                from backend.services.supabase_service import supabase_service
+                supabase_service.sync_readings_to_supabase(readings)
+            except Exception as e:
+                print(f"[WARN] Supabase auto-sync failed: {e}")
 
         # Re-compute daily aggregates and check anomalies on recent batch
         self.sync_daily_aggregates_and_anomalies(db)

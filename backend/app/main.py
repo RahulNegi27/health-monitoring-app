@@ -8,7 +8,7 @@ from fastapi.responses import FileResponse
 
 from backend.app.config import settings
 from backend.app.database import engine, Base, SessionLocal
-from backend.app.routes import health, simulator, user
+from backend.app.routes import health, simulator, user, ml, supabase
 from backend.app.models import SensorReading
 from backend.services.simulator import simulator_instance
 from backend.services.health_service import health_service
@@ -55,6 +55,9 @@ app.add_middleware(
 app.include_router(health.router)
 app.include_router(simulator.router)
 app.include_router(user.router)
+app.include_router(ml.router)
+app.include_router(supabase.router)
+
 
 # Mount frontend directory for static assets
 frontend_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "frontend")

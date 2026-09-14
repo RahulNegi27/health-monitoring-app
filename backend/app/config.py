@@ -28,4 +28,13 @@ class Settings(BaseSettings):
     ISOLATION_FOREST_CONTAMINATION: float = 0.05
     RANDOM_STATE: int = 42
 
+    # Supabase Cloud Integration
+    SUPABASE_URL: str = ""
+    SUPABASE_KEY: str = ""                     # Anon or Service Role key
+    SUPABASE_SERVICE_ROLE_KEY: str = ""
+    SUPABASE_DB_URL: str = ""                  # Direct PostgreSQL connection string
+    SUPABASE_SYNC_ENABLED: bool = True
+    SUPABASE_AUTO_SYNC: bool = False           # Automatically stream readings to Supabase
+
 settings = Settings()
+
