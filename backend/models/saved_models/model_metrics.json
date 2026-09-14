@@ -1,14 +1,14 @@
 {
   "status": "trained",
-  "trained_at": "2026-09-14T14:38:24.581078+00:00",
+  "trained_at": "2026-09-14T14:47:52.919162+00:00",
   "sample_counts": {
-    "total_samples": 600,
-    "train_samples": 480,
-    "test_samples": 120,
+    "total_samples": 3000,
+    "train_samples": 2400,
+    "test_samples": 600,
     "class_distribution": {
-      "Low": 330,
-      "Moderate": 168,
-      "High": 102
+      "Low": 1650,
+      "Moderate": 840,
+      "High": 510
     }
   },
   "performance": {
@@ -26,19 +26,19 @@
       "precision": 1.0,
       "recall": 1.0,
       "f1_score": 1.0,
-      "test_support": 66
+      "test_support": 330
     },
     "Moderate": {
       "precision": 1.0,
       "recall": 1.0,
       "f1_score": 1.0,
-      "test_support": 34
+      "test_support": 168
     },
     "High": {
       "precision": 1.0,
       "recall": 1.0,
       "f1_score": 1.0,
-      "test_support": 20
+      "test_support": 102
     }
   },
   "confusion_matrix": {
@@ -49,77 +49,77 @@
     ],
     "matrix": [
       [
-        66,
+        330,
         0,
         0
       ],
       [
         0,
-        34,
+        168,
         0
       ],
       [
         0,
         0,
-        20
+        102
       ]
     ]
   },
   "feature_importances": [
     {
       "feature": "temperature",
-      "importance": 0.2422,
-      "percentage": 24.22
+      "importance": 0.2432,
+      "percentage": 24.32
     },
     {
       "feature": "temp_diff",
-      "importance": 0.2228,
-      "percentage": 22.28
+      "importance": 0.2308,
+      "percentage": 23.08
     },
     {
       "feature": "spo2",
-      "importance": 0.1956,
-      "percentage": 19.56
+      "importance": 0.1934,
+      "percentage": 19.34
     },
     {
       "feature": "sleep_hours",
-      "importance": 0.0879,
-      "percentage": 8.79
+      "importance": 0.0882,
+      "percentage": 8.82
     },
     {
       "feature": "spo2_drop",
-      "importance": 0.0807,
-      "percentage": 8.07
-    },
-    {
-      "feature": "hr_zscore",
-      "importance": 0.0487,
-      "percentage": 4.87
+      "importance": 0.0823,
+      "percentage": 8.23
     },
     {
       "feature": "hrv_rmssd_proxy",
-      "importance": 0.0425,
-      "percentage": 4.25
+      "importance": 0.0629,
+      "percentage": 6.29
+    },
+    {
+      "feature": "hr_zscore",
+      "importance": 0.0361,
+      "percentage": 3.61
     },
     {
       "feature": "heart_rate",
-      "importance": 0.0418,
-      "percentage": 4.18
+      "importance": 0.0334,
+      "percentage": 3.34
     },
     {
       "feature": "steps",
-      "importance": 0.0318,
-      "percentage": 3.18
+      "importance": 0.0252,
+      "percentage": 2.52
     },
     {
       "feature": "hr_rolling_std",
-      "importance": 0.0057,
-      "percentage": 0.57
+      "importance": 0.0044,
+      "percentage": 0.44
     },
     {
       "feature": "is_elevated_sedentary",
-      "importance": 0.0004,
-      "percentage": 0.04
+      "importance": 0.0,
+      "percentage": 0.0
     }
   ],
   "hyperparameters": {
