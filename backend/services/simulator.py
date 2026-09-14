@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional
 
 class HealthDataSimulator:
-    """
+    """ 
     Physiologically realistic sensor simulator generating multi-day time series
     and streaming real-time vitals for interactive demonstration.
     """
