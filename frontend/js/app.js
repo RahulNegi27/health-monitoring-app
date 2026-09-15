@@ -1,3 +1,12 @@
+// PulseGuard AI — Professional Application Logic & Real-Time Engines
+
+let activeChartType = 'hr';
+let trendChartInstance = null;
+let currentAlertFilter = 'all';
+let isStreamingActive = false;
+let pollingTimer = null;
+let cachedTrendsData = null;
+let currentBpm = 72;
 
 // Real-Time ECG Oscilloscope State
 let ecgCanvas = null;
