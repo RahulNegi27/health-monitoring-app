@@ -30,11 +30,14 @@ htmlcov/
 .tox/
 .nox/
 
-# Database & Environment
+# Database & Environment (Render will create a fresh DB on start from seeded data)
 *.db
 *.sqlite3
 .env
 .env.local
+
+# DO NOT ignore saved ML model artifacts — needed for production deployment
+# backend/models/saved_models/*.joblib  <-- intentionally tracked in git
 
 # IDE & OS
 .vscode/
