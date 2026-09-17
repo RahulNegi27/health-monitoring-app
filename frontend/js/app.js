@@ -4,7 +4,7 @@ let activeChartType = 'hr';
 let trendChartInstance = null;
 let currentAlertFilter = 'all';
 let isStreamingActive = false;
-let pollingTimer = null;
+let pollingTimer = null; 
 let cachedTrendsData = null;
 let currentBpm = 72;
 
